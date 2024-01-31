@@ -8,15 +8,15 @@ Some observations lack a fragment of text to extract
 # Data
 
 ### train.json 
-Данные для обучения в формате json имеют следующие поля:
-- `id`: int - id документа
--  `text`: str - текст документа, в котором может содержаться фрагмент текста, соответствующий пункту анкеты из поля `label`
-- `label`: str - название пункта анкеты. Может принимать одно из двух значений: `обеспечение исполнения контракта` или `обеспечение гарантийных обязательств`
-- `extracted_part`: dict следующего формата:
+The training data in json format has the following fields:
+- `id`: int - document ID
+-  `text`: str - document text, where a fragment corresponding to the questionnaire item from the `label` field may be present
+- `label`: str - the title of the questionnaire item. It can take one of two values: `contract performance assurance` or `guarantee obligations assurance`
+- `extracted_part`: dict with the following format:
     ```
     {
-        'text': [фрагмент текста из поля `text`, соответствующий пункту анкеты], 
-        'answer_start': [индекс символа начала фрагмента текста в тексте документа],
-        'answer_end': [индекс символа конца фрагмента текста в тексте документа]
+        'text': [fragment of text from the `text` field corresponding to the questionnaire item], 
+        'answer_start': [index of the starting character of the text fragment in the document text],
+        'answer_end': [index of the ending character of the text fragment in the document text]
     }
    ```
