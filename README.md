@@ -1,11 +1,11 @@
 # Question-Answering
-Модель, которая поможет отделу закупок извлекать 
-нужный кусок текста из документа для того, чтобы сформировать анкету заявки. То, какой именно фрагмент текста нужно извлечь, зависит от пункта анкеты, соответствующего документу.
+A model that will help the purchasing department extract
+the required piece of text from the document in order to create an application form. Exactly which piece of text needs to be extracted depends on the questionnaire item corresponding to the document.
 
-У части наблюдений отсутствует фрагмент текста к извлечению
+Some observations lack a fragment of text to extract
 
 
-# Данные
+# Data
 
 ### train.json 
 Данные для обучения в формате json имеют следующие поля:
